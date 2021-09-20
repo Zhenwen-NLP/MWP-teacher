@@ -181,8 +181,8 @@ for epoch in range(n_epochs):
                     if p < threshold:
                         if one_true_record[pos_word] < 5:
                             one_fake_record[pos_word] = random.choice(op_list)
-                        #else:
-                        #    one_fake_record[pos_word] = random.choice(num_list)
+                        else:
+                            one_fake_record[pos_word] = random.choice(num_list)
             fake_batches[idx][pos] = one_fake_record
         loss_teacher = teacher_pretrain(
                     input_batches[idx], input_lengths[idx], output_batches[idx], output_lengths[idx],
